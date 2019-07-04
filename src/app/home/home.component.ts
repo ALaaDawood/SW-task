@@ -17,24 +17,37 @@ export class HomeComponent implements OnInit {
   constructor(private data: CharactersService) { }
 
   ngOnInit() {
-    this.getpeople();
+    //this.getpeople();
+    this.filterPeople(this.searchText);
   }
-  getpeople(){
-    this.data.getAllPeople()
+  // getpeople(){
+  //   this.data.getAllPeople()
+  //   .subscribe(
+  //     res => {
+  //       console.log(res)
+  //       this.success = true;
+  //       this.characters = res;
+  //       this.filterPeople(this.searchText);
+  //     },
+  //     err => console.log(err)
+  //   );
+  // }
+  // filterPeople(searchText){
+  //   this.filteredChars = this.characters.results.filter((item) => {
+  //     return item.name.toLowerCase().includes(searchText.toLowerCase());
+  //   });
+  // }
+  filterPeople(searchText){
+    this.data.getFilteredPeople(searchText)
     .subscribe(
       res => {
-        console.log(res)
         this.success = true;
+        console.log(res);
         this.characters = res;
-        this.filterPeople(this.searchText);
+        this.filteredChars = this.characters.results;
       },
       err => console.log(err)
     );
-  }
-  filterPeople(searchText){
-    this.filteredChars = this.characters.results.filter((item) => {
-      return item.name.toLowerCase().includes(searchText.toLowerCase());
-    });
   }
   drop(event: CdkDragDrop<Character[]>) {
     moveItemInArray(this.filteredChars, event.previousIndex, event.currentIndex);
