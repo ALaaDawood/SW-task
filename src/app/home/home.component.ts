@@ -49,6 +49,7 @@ export class HomeComponent implements OnInit {
       err => console.log(err)
     );
   }
+
   drop(event: CdkDragDrop<Character[]>) {
     moveItemInArray(this.filteredChars, event.previousIndex, event.currentIndex);
   }

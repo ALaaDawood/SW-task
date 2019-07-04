@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +10,7 @@ searchUrl: string = "https://swapi.co/api/people/?search="
 
   constructor(private http: HttpClient) { }
 
+//this gets ALL people from the Api without implementing any search filters on them
   getAllPeople(){
     return this.http.get(this.peopleUrl);
   }
