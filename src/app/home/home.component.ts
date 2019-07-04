@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CharactersService } from '../characters.service'
 import { Character } from './character.model'
+import { CdkDragDrop, moveItemInArray  } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import { Character } from './character.model'
 export class HomeComponent implements OnInit {
 
   characters = null ;
-  filteredChars: Character;
+  filteredChars: Character[] = [];
   searchText: string = '';
   success: boolean = false;
   constructor(private data: CharactersService) { }
@@ -34,5 +35,8 @@ export class HomeComponent implements OnInit {
     this.filteredChars = this.characters.results.filter((item) => {
       return item.name.toLowerCase().includes(searchText.toLowerCase());
     });
+  }
+  drop(event: CdkDragDrop<Character[]>) {
+    moveItemInArray(this.filteredChars, event.previousIndex, event.currentIndex);
   }
 }

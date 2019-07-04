@@ -1,19 +1,17 @@
-<div *ngIf = "success">
-  
-<input [(ngModel)]="searchText" type="text" (keyup)="filterPeople(searchText)">
-
-  
-
-
-  <div class="card" style="width: 18rem;" *ngFor = "let character of filteredChars ">
-    <div class="card-header">
-      <h5 class="card-title">{{character.name}}</h5>
+<div class="container">
+  <div class="row">
+    <input [(ngModel)]="searchText" type="text" (keyup)="filterPeople(searchText)" class="form-control mt-5 mb-5 col-6">
+  </div>
+  <div *ngIf = "success" cdkDropList (cdkDropListDropped)="drop($event)">
+    <div class="card row m-2" style="width: 18rem;" *ngFor = "let character of filteredChars" cdkDrag>
+      <div class="card-header">
+        <h5 class="card-title">{{character.name}}</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><a href="{{character.url}}" class="card-link">URL</a></li>
+        <li class="list-group-item">Height: {{character.height}}</li>
+        <li class="list-group-item"><a href="{{character.homeworld}}" class="card-link">homeWorld</a></li>
+      </ul>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"><a href="{{character.url}}" class="card-link">URL</a></li>
-      <li class="list-group-item">Height: {{character.height}}</li>
-      <li class="list-group-item"><a href="{{character.homeworld}}" class="card-link">homeWorld</a></li>
-    </ul>
   </div>
 </div>
-
