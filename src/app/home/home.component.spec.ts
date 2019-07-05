@@ -29,26 +29,26 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-/* a test that ensures we have a search box and it has the same value
-  of the displayed cards
+  /* a test that ensures we have a search box and it has the same value
+    of the displayed cards
   */
   it('should Have a search box with the search text', ()=>{
-    expect(de.query(By.css('input')).nativeElement.innerText).toBe(component.searchText);
+    expect(de.query(By.css('#search-box')).nativeElement.innerText).toBe(component.searchText);
   });
-/* a test that ensures the displayed cards are in fact the correct search results
+  /* a test that ensures the displayed cards are in fact the correct search results
   */
-  it('contains the search text', ()=>{
+  it('the results contain the search text', ()=>{
     for (let character of component.filteredChars) {
-      expect(character.name).toBe(component.searchText);
+      expect(character.name).toContain(component.searchText);
     }  
   });
 
-  it('should succeed', fakeAsync(()=> {
-    expect(component.success).toBe(false);
-    component.filterPeople(component.searchText);
-    tick();
-    //expect(component.success).toBe(true);
-  }));
+  // it('should succeed', fakeAsync(()=> {
+  //   expect(component.success).toBe(false);
+  //   component.filterPeople(component.searchText);
+  //   tick();
+  //   expect(component.success).toBe(true);
+  // }));
 
   it('has name', ()=> {
     for (let character of component.filteredChars) {
@@ -73,5 +73,4 @@ describe('HomeComponent', () => {
         expect(character.homeworld).toBeTruthy();
     }  
   });
-
 });

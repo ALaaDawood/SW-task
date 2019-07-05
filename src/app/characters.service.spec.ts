@@ -21,13 +21,19 @@ describe('CharactersService', () => {
 
   it('should has getfilteredPeople function', () => {
     expect(charactersService.getFilteredPeople).toBeTruthy();
-   });
+  });
 
-
+  it('should has getAllPeople function', () => {
+    expect(charactersService.getAllPeople).toBeTruthy();
+  });
+   //ensures that the method used is "get" and it in fact gets response
   it('getFilteredPeople() should GET people', () => {
-
-    const people = {};
-
+    const people = {
+      count: 5,
+      next: null, 
+      previous: null,
+       results: Array(5)
+    };
     charactersService.getFilteredPeople("r").subscribe((res) => {
       expect(res).toEqual(people);
     });
@@ -36,6 +42,5 @@ describe('CharactersService', () => {
     req.flush(people);
     httpMock.verify();
   });
-
 });
 
