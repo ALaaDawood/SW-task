@@ -5,8 +5,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CharactersService {
-peopleUrl: string = "https://swapi.co/api/people/";
-searchUrl: string = "https://swapi.co/api/people/?search=";
+  
+  peopleUrl: string = "https://swapi.co/api/people/";
+  searchUrl: string = "https://swapi.co/api/people/?search=";
 
   constructor(private http: HttpClient) { }
 
