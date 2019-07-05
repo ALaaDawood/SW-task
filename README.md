@@ -20,8 +20,8 @@ Also, the user can drag and drop the rendered cards to reorder them on screen.
 ### search Approach
 
 To implement the search feature I could use two ways :
-1. Use the Api url `https://swapi.co/api/people/` which gets a list of **all** people and then make my search query inside this list by filtering it to the elements containing the search term only.
-2. Use the Api url `https://swapi.co/api/people/?search=r2` which just takes the search term as a parameter in the url, filters the people
+1. Use the Api url https://swapi.co/api/people/ which gets a list of **all** people and then make my search query inside this list by filtering it to the elements containing the search term only.
+2. Use the Api url https://swapi.co/api/people/?search=r2 which just takes the search term as a parameter in the url, filters the people
 and returns a list with **only** the filtered people.
 
 ## How To Run
@@ -55,3 +55,9 @@ for deployment, we need to For create a production build and then copy the outpu
 1. Run the production build command: `ng build --prod`
 2. Copy everything within the output folder (dist) to a folder on the server.
 3. Configure the server to redirect requests for missing files to index.html.
+
+## Screenshots
+![ScreenShot1](assets/images/ss1.jpg)
+![ScreenShot1](assets/images/ss2.jpg)
+![ScreenShot1](assets/images/ss3.jpg)
+
