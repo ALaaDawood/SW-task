@@ -1,10 +1,49 @@
+
 .navbar{
-    background-color:  #7700FF
+    background-color:  #303030
 }
 .navbar a{
 color: white;
 }
-.navbar a:hover{
-    background-color: #8E2BFF
-
+.navbar-brand img{
+    width: 40%;
+    height: auto;
+}
+@-webkit-keyframes prelude {
+    from{opacity: 0;}
+    20%{opacity: 1;}
+      80%{opacity: 1;}
+      to{opacity: 0;}
+  }
+  @-moz-keyframes prelude {
+    from{opacity: 0;}
+    20%{opacity: 1;}
+    80%{opacity: 1;}
+    to{opacity: 0;}
+}
+@-o-keyframes prelude {
+    from{opacity: 0;}
+    20%{opacity: 1;}
+    80%{opacity: 1;}
+    to{opacity: 0;}
+}
+#prelude{
+    opacity: 0;
+    color: white;
+    margin-right: 100px;
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 1px #1B7DEB;
+    -webkit-animation-name: prelude;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: prelude;
+    -moz-animation-timing-function: linear;
+    -moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-name: prelude;
+    -o-animation-timing-function: linear;
+    -o-animation-duration: 5s;
+    -o-animation-iteration-count: infinite;
 }

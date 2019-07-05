@@ -1,20 +1,22 @@
-<div class="container">
-  <div class="row input-group mt-2 mb-5">
+<div id="main-wrapper">
+  <div class="container">
+    <div class="row input-group mb-5">
       <span class="input-group-prepend"><i class="fa fa-search input-group-text"></i></span>
-      <input [(ngModel)]="searchText" type="text" (keyup)="filterPeople(searchText)" placeholder="Search for people" class="form-control">
-  </div>
-
-  <div *ngIf = "success" cdkDropList (cdkDropListDropped)="drop($event)">
-    <div class="card row m-2" *ngFor = "let character of filteredChars" cdkDrag>
-      <div class="card-header">
-        <h5 class="card-title">{{character.name}}</h5>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><a href="{{character.url}}" class="card-link">URL</a></li>
-        <li class="list-group-item">Height: {{character.height}}</li>
-        <li class="list-group-item"><a href="{{character.homeworld}}" class="card-link">homeWorld</a></li>
-      </ul>
+      <input [(ngModel)]="searchText" type="text" (keydown)="filterPeople(searchText)" placeholder="Search for people" class="form-control">
     </div>
-  </div>
-  <h5 *ngIf = "filteredChars.length == 0">No People to match your search :(</h5>
+    
+      <div *ngIf = "success" cdkDropList (cdkDropListDropped)="drop($event)">
+        <div class="card row m-2" *ngFor = "let character of filteredChars" cdkDrag>
+          <div class="card-header">
+            <h5 class="card-title">{{character.name}}</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="{{character.url}}" class="card-link">URL</a></li>
+            <li class="list-group-item">Height: {{character.height}}</li>
+            <li class="list-group-item"><a href="{{character.homeworld}}" class="card-link">homeWorld</a></li>
+          </ul>
+        </div>
+      </div>
+      <h5 id="not-found" *ngIf = "filteredChars.length == 0">No result matches your search :(</h5>
+    </div>
 </div>

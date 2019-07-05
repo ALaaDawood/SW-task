@@ -1,8 +1,30 @@
+
 .card-header{
     //background-color : #8E2BFF;
-    color: #7700FF;
+    color: white;
+    background-image: url("../../assets/img/stars.jpg")
 }
 
 .list-group-item:hover{
     background-color: #ecf0f1;
+}
+#main-wrapper{
+    background-image: url("../../assets/img/c1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 30px;   
+}
+.card{
+    padding: 10px;
+    margin: 50px 0;
+    background-color: white;
+    text-align: center;
+    transition: all ease .3s;
+}
+.card:hover{
+    box-shadow: 0 15px 50px 0 rgba(255, 255, 255, 0.8);
+}
+#not-found{
+    color: #ecf0f1;
+    margin: 20px;
 }
