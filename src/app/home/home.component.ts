@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
     this.data.getFilteredPeople(searchText)
     .subscribe(
       res => {
-        this.success = true;
+        this.success = !this.success;
         console.log(res);
         this.characters = res;
         this.filteredChars = this.characters.results;
