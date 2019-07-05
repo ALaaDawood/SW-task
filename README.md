@@ -57,7 +57,7 @@ for deployment, we need to For create a production build and then copy the outpu
 3. Configure the server to redirect requests for missing files to index.html.
 
 ## Screenshots
-![ScreenShot1](assets/images/ss1.jpg)
-![ScreenShot1](assets/images/ss2.jpg)
-![ScreenShot1](assets/images/ss3.jpg)
+![ScreenShot1](src/assets/images/ss1.jpg)
+![ScreenShot1](src/assets/images/ss2.jpg)
+![ScreenShot1](src/assets/images/ss3.jpg)
 
