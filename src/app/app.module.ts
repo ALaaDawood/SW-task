@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     HttpClientModule,
     FormsModule,
     DragDropModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
