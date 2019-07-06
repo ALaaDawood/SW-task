@@ -48,7 +48,6 @@ export class HomeComponent implements OnInit {
       res => {
         this.success = !this.success;
         this.first = false;
-        console.log(res);
         this.characters = res;
         this.filteredChars = this.characters.results;
       },
