@@ -58,6 +58,8 @@ for deployment, we need to For create a production build and then copy the outpu
 
 ## Screenshots
 ![ScreenShot1](src/assets/images/ss1.jpg)
-![ScreenShot1](src/assets/images/ss2.jpg)
-![ScreenShot1](src/assets/images/ss3.jpg)
+![ScreenShot2](src/assets/images/ss2.jpg)
+![ScreenShot3](src/assets/images/ss3.jpg)
+### Tests
+![ScreenShot4](src/assets/images/ss4.jpg)
 
