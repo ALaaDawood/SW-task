@@ -5,8 +5,8 @@
             <span class="input-group-append"><i class="fa fa-search input-group-text"></i></span>
         </div>
 
-        <div *ngIf="success" cdkDropList (cdkDropListDropped)="drop($event)">
-            <div class="card row  w-50 " *ngFor="let character of filteredChars" cdkDrag>
+        <div class="row" *ngIf="success" cdkDropList (cdkDropListDropped)="drop($event)">
+            <div class="card col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-7" *ngFor="let character of filteredChars" cdkDrag>
                 <div class="card-header">
                     <h5 class="card-title">{{character.name}}</h5>
                 </div>
